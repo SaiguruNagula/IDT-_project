@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Organ Recipient Registration</title>
+    <link rel="stylesheet" href="gpt.css">
+</head>
+<body>
+    <header>
+        <h1>Organ Recipient Registration</h1>
+        <p>Register to receive life-saving organ transplants!</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Register as a Recipient</h2>
+            <form id="recipientForm" action="submitRecipient.php" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="blood-type">Blood Type:</label>
+                <select id="blood-type" name="blood_type" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="organs">Organs Needed:</label>
+                <div><input type="checkbox" id="kidney" name="organ[]" value="Kidney"> Kidney<br>
+                <input type="checkbox" id="heart" name="organ[]" value="Heart"> Heart<br>
+                <input type="checkbox" id="liver" name="organ[]" value="Liver"> Liver<br>
+                <input type="checkbox" id="lungs" name="organ[]" value="Lungs"> Lungs<br>
+                <input type="checkbox" id="pancreas" name="organ[]" value="Pancreas"> Pancreas<br>
+                </div>
+
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    
+</body>
+</html>
